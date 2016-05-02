@@ -1,0 +1,15 @@
+TAP version 13
+ok 1 - HdipTest\StudentTest::testCanCreateStudent
+ok 2 - HdipTest\StudentTest::testGetId
+ok 3 - HdipTest\UserTest::testCanCreateUser
+ok 4 - HdipTest\UserTest::testGetId
+ok 5 - HdipTest\UserTest::testGetUsername
+ok 6 - HdipTest\UserTest::testGetPassword
+ok 7 - HdipTest\UserTest::testGetRole
+not ok 8 - Failure: HdipTest\UserTest::testSetPassword
+  ---
+  message: 'Failed asserting that ''$2y$10$Pw6nlmKHlkTQfjKmX3IoEOA6uFfRM9lSmuBNyDaqekAKK9o7wvR3O'' is identical to null.'
+  severity: fail
+  ...
+ok 9 - HdipTest\UserTest::testCanFindMatchingUsernameAndPassword
+1..9

@@ -1,0 +1,56 @@
+{% extends '_base.html.twig' %}
+
+{% block title %}Students{% endblock %}
+
+{% block main %}
+    <form action="/showNewStudentForm" method="get">
+        <input type="hidden" name="action" value="showNewStudentForm">
+        <input type="submit" value="Create a new student">
+    </form>
+
+    <h2>All the students you teach</h2>
+    <table>
+        <tr>
+            <th>Student Id</th>
+            <th>Class id</th>
+            <th>Username</th>
+            <th>Instructor's name</th>
+            <th>Current grade</th>
+            <th>Age of attendance(%)</th>
+            <th>Next grading</th>
+            <th>Average grade</th>
+            <th>Status</th>
+        </tr>
+        {% for student in students %}
+            <tr>
+                <td>
+                    {{ student.id }}
+                </td>
+                <td>
+                    {{ student.classId }}
+                </td>
+                <td>
+                    {{ student.username }}
+                </td>
+                <td>
+                    {{ student.instructorUsername }}
+                </td>
+                <td>
+                    {{ student.currentGrade }}
+                </td>
+                <td>
+                    {{ student.ageAttendance }}
+                </td>
+                <td>
+                    {{ student.nextGrading}}
+                </td>
+                <td>
+                    {{ student.averageGrade}}
+                </td>
+                <td>
+                    {{ student.status}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

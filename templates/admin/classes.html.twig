@@ -1,0 +1,37 @@
+{% extends '_base.html.twig' %}
+
+{% block title %}Classes{% endblock %}
+
+{% block main %}
+    <h2>All the classes you teach</h2>
+
+    <table>
+        <tr>
+            <th>View More</th>
+            <th>Class Id</th>
+            <th>Instructor's name</th>
+            <th>No. of students</th>
+            <th>CLass level</th>
+        <tr>
+        {% for class in classes %}
+        <tr>
+            <td>
+                <a href="/showClassDetail/{{ class.Id }}">(details)</a>
+            </td>
+            <td>
+                {{ class.id }}
+            </td>
+            <td>
+                {{ class.instructorUsername }}
+            </td>
+            <td>
+                {{ class.noOfStudents }}
+            </td>
+            <td>
+                {{ class.level }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

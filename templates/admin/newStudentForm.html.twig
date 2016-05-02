@@ -1,0 +1,19 @@
+{% extends '_base.html.twig' %}
+
+{% block title %}New Student Form{% endblock %}
+
+{% block main %}
+    <h2>Add a new student</h2>
+    <form action="/adminAddStudent" method="post">
+        <label>Student Id:</label><input type="text" name="id"><br>
+        <label>Class Id:</label><input type="text" name="classId"><br>
+        <label>Username:</label><input type="text" name="username"><br>
+        <label>Instructor username:</label><input type="text" name="instructorUsername"><br>
+        <label>currentGrade:</label><input type="int" name="currentGrade"><br>
+        <label>ageAttendance:</label><input type="text" name="ageAttendance"><br>
+        <label>nextGrading:</label><input type="date" name="nextGrading"><br>
+        <label>averageGrade:</label><input type="text" name="averageGrade"><br>
+        <label>status:</label><input type="text" name="status"><br>
+        <input type="submit" value="Add new Student">
+    </form>
+{% endblock %}
